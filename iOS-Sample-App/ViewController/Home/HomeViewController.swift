@@ -20,6 +20,7 @@ class HomeViewController: UIViewController, GetPostDelegate {
     
     func getPostResult(data: [Post]) {
         print("data -->:", data.json() as Any)
+        print("-- testing --")
     }
     
     func getList() {
