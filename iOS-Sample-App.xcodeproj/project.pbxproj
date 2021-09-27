@@ -16,6 +16,7 @@
 		D986BDB82701576200CDA675 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D986BDB72701576200CDA675 /* HomeViewController.swift */; };
 		D986BDC427015A6300CDA675 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D986BDC327015A6300CDA675 /* HomeViewModel.swift */; };
 		D986BDC627015A7800CDA675 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D986BDC527015A7800CDA675 /* HomeModel.swift */; };
+		D986BDC8270165D400CDA675 /* ApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D986BDC7270165D400CDA675 /* ApiKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		D986BDB72701576200CDA675 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D986BDC327015A6300CDA675 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		D986BDC527015A7800CDA675 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		D986BDC7270165D400CDA675 /* ApiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 		D986BDC0270159F900CDA675 /* ApiKey */ = {
 			isa = PBXGroup;
 			children = (
+				D986BDC7270165D400CDA675 /* ApiKey.swift */,
 			);
 			path = ApiKey;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D986BDC8270165D400CDA675 /* ApiKey.swift in Sources */,
 				D986BDC627015A7800CDA675 /* HomeModel.swift in Sources */,
 				D986BD85270155D600CDA675 /* AppDelegate.swift in Sources */,
 				D986BDC427015A6300CDA675 /* HomeViewModel.swift in Sources */,
