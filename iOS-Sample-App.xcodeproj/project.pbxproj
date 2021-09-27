@@ -216,6 +216,7 @@
 		D986BDC127015A3F00CDA675 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D986BDC92701687800CDA675 /* Product */,
 				D986BDC227015A4C00CDA675 /* Home */,
 			);
 			path = Model;
@@ -228,6 +229,13 @@
 				D986BDC527015A7800CDA675 /* HomeModel.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		D986BDC92701687800CDA675 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Product;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
