@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		D986BD85270155D600CDA675 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D986BD84270155D600CDA675 /* AppDelegate.swift */; };
-		D986BD87270155D600CDA675 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D986BD86270155D600CDA675 /* SceneDelegate.swift */; };
-		D986BD89270155D600CDA675 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D986BD88270155D600CDA675 /* ViewController.swift */; };
 		D986BD8C270155D600CDA675 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D986BD8A270155D600CDA675 /* Main.storyboard */; };
 		D986BD8E270155E500CDA675 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D986BD8D270155E500CDA675 /* Assets.xcassets */; };
 		D986BD91270155E500CDA675 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D986BD8F270155E500CDA675 /* LaunchScreen.storyboard */; };
 		D986BD9C270155E500CDA675 /* iOS_Sample_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D986BD9B270155E500CDA675 /* iOS_Sample_AppTests.swift */; };
 		D986BDA7270155E500CDA675 /* iOS_Sample_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D986BDA6270155E500CDA675 /* iOS_Sample_AppUITests.swift */; };
+		D986BDB82701576200CDA675 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D986BDB72701576200CDA675 /* HomeViewController.swift */; };
+		D986BDC427015A6300CDA675 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D986BDC327015A6300CDA675 /* HomeViewModel.swift */; };
+		D986BDC627015A7800CDA675 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D986BDC527015A7800CDA675 /* HomeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +38,6 @@
 /* Begin PBXFileReference section */
 		D986BD81270155D600CDA675 /* iOS-Sample-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Sample-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D986BD84270155D600CDA675 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D986BD86270155D600CDA675 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D986BD88270155D600CDA675 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D986BD8B270155D600CDA675 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D986BD8D270155E500CDA675 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D986BD90270155E500CDA675 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +48,9 @@
 		D986BDA2270155E500CDA675 /* iOS-Sample-AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-Sample-AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D986BDA6270155E500CDA675 /* iOS_Sample_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_Sample_AppUITests.swift; sourceTree = "<group>"; };
 		D986BDA8270155E500CDA675 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D986BDB72701576200CDA675 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D986BDC327015A6300CDA675 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		D986BDC527015A7800CDA675 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +101,10 @@
 		D986BD83270155D600CDA675 /* iOS-Sample-App */ = {
 			isa = PBXGroup;
 			children = (
+				D986BDC127015A3F00CDA675 /* Model */,
+				D986BDB42701564B00CDA675 /* Manager */,
+				D986BDB52701565A00CDA675 /* ViewController */,
 				D986BD84270155D600CDA675 /* AppDelegate.swift */,
-				D986BD86270155D600CDA675 /* SceneDelegate.swift */,
-				D986BD88270155D600CDA675 /* ViewController.swift */,
 				D986BD8A270155D600CDA675 /* Main.storyboard */,
 				D986BD8D270155E500CDA675 /* Assets.xcassets */,
 				D986BD8F270155E500CDA675 /* LaunchScreen.storyboard */,
@@ -126,6 +129,102 @@
 				D986BDA8270155E500CDA675 /* Info.plist */,
 			);
 			path = "iOS-Sample-AppUITests";
+			sourceTree = "<group>";
+		};
+		D986BDB42701564B00CDA675 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				D986BDBE270157E700CDA675 /* Ultilze */,
+				D986BDBD270157AE00CDA675 /* GlobalView */,
+				D986BDBB2701579C00CDA675 /* Session */,
+				D986BDBA2701578600CDA675 /* Extension */,
+				D986BDB92701577600CDA675 /* API */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		D986BDB52701565A00CDA675 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D986BDB62701574E00CDA675 /* Home */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		D986BDB62701574E00CDA675 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D986BDB72701576200CDA675 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D986BDB92701577600CDA675 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				D986BDC0270159F900CDA675 /* ApiKey */,
+				D986BDBF270159E500CDA675 /* ApiManager */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		D986BDBA2701578600CDA675 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		D986BDBB2701579C00CDA675 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		D986BDBD270157AE00CDA675 /* GlobalView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GlobalView;
+			sourceTree = "<group>";
+		};
+		D986BDBE270157E700CDA675 /* Ultilze */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Ultilze;
+			sourceTree = "<group>";
+		};
+		D986BDBF270159E500CDA675 /* ApiManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ApiManager;
+			sourceTree = "<group>";
+		};
+		D986BDC0270159F900CDA675 /* ApiKey */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ApiKey;
+			sourceTree = "<group>";
+		};
+		D986BDC127015A3F00CDA675 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D986BDC227015A4C00CDA675 /* Home */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D986BDC227015A4C00CDA675 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D986BDC327015A6300CDA675 /* HomeViewModel.swift */,
+				D986BDC527015A7800CDA675 /* HomeModel.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +357,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D986BD89270155D600CDA675 /* ViewController.swift in Sources */,
+				D986BDC627015A7800CDA675 /* HomeModel.swift in Sources */,
 				D986BD85270155D600CDA675 /* AppDelegate.swift in Sources */,
-				D986BD87270155D600CDA675 /* SceneDelegate.swift in Sources */,
+				D986BDC427015A6300CDA675 /* HomeViewModel.swift in Sources */,
+				D986BDB82701576200CDA675 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,10 +543,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "rith.com.iOS-Sample-App";
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kh.com.iOS-Sample-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -462,10 +563,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "rith.com.iOS-Sample-App";
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "kh.com.iOS-Sample-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
